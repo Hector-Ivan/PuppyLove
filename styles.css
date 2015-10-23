@@ -1,0 +1,276 @@
+/**************************************************************
+************** INHERITED STYLES ******************************/
+html {
+    box-sizing: border-box;
+    color: #444;
+    font: 12pt 'Open Sans', Arial;
+    font-weight: 400;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+/*************************************************************
+************** DEFAULTS ***************************************/
+a {
+	color: white;
+	text-decoration: none;
+}
+
+h1 {
+	font-weight: normal;
+}
+
+p {
+	margin: 0;
+}
+
+aside p {
+	margin: 5px;
+}
+
+/***************************************************************
+************** LAYOUT *****************************************/
+
+/* Hero */
+.hero {
+	background-size: cover;
+	background-image: radial-gradient(rgba(0, 142, 172, 0.8), rgba(0, 142, 172, 0.87)), url('bg.jpg');
+}
+
+.hero > div {
+	width: 950px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative; /* to pos: absolute;  '.title' */
+}
+
+.primary-header {
+	height: 140px;
+	position: relative; /*to pos: absolute; '.primary-header>a (logo)', 
+						'.primary-header form', 'primary-header nav'*/
+}
+
+.logo {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.primary-header form {
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+
+.primary-header nav {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.main-title {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 30px;
+}
+
+/* Primary Content Div */
+.primary-content {
+	background-color: #D7E1E7;
+	padding-bottom: 10px;
+}
+
+.boxes-container {
+	width: 950px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.main-content {
+	width: 950px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.main-content aside {
+	height: 400px;
+}
+
+.main-content main {
+	flex: 1;
+}
+
+.main-objects {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 8px;
+}
+
+.main-objects .media-object {
+	width: 175px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 8px;
+	margin-right: 8px;
+	margin-left: 8px;
+}
+
+.main-nav {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.main-nav a {
+	color: white;
+	padding: 15px;
+}
+/*******************************************************************
+************* COMPONENTS *******************************************/
+.primary-header nav {
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.primary-header button {
+	background-color: #EA501A;
+	border: none;
+	border-radius: 2px;
+	color: white;
+}
+
+.primary-header input {
+	background-color: rgba(0,0,0, 0);
+	color: rgba(255, 255, 255, 0.3);
+	border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+input::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+	font-family: Lobster;
+	font-size: 50px;
+}
+
+.promo-box {
+	background-color: #76EE00;
+	display: inline-block;
+	margin-right: 8px;
+	margin-left: 8px;
+	padding: 8px;
+	width: 275px;
+	transform: translateY(-15px);
+}
+
+.promo-box p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.promo-box.raise {
+	border-top: 4px solid #EA501A;
+}
+
+.promo-box.raise button {
+	color: #EA501A;
+	border: 3px solid #EA501A ;
+}
+
+.promo-box.feed {
+	border-top: 4px solid #8ECF41;
+}
+
+.promo-box.feed button {
+	color: #8ECF41;
+	border: 3px solid #8ECF41;
+}
+
+.promo-box.sell {
+	border-top: 4px solid #0792D3;
+}
+
+.promo-box.sell button {
+	color: #0792D3;
+	border: 3px solid #0792D3;
+}
+
+.breakout {
+	background-color: white;
+	box-shadow: 0 0 10px -1px;
+}
+
+.main-title {
+	text-align: center;
+	color: white;
+	padding-bottom: 10px;
+}
+
+.primary-aside .media-object {
+	width: 350px;
+	display: flex;
+	margin: 8px;
+}
+
+.media-object .graphic {
+	background-size: cover;
+	width: 100px;
+	height: 100px;
+}
+
+.description {
+	background-color: #E8F3F9;
+	flex: 1;
+}
+
+.media-object .main-graphic {
+	background-size: cover;
+	height: 200px;
+}
+
+.main-bio {
+	background-color: #E3EFD6;
+}
+
+.main-objects .dog-name {
+	background-color: #8ECF41;
+	color: #487312;
+	font-weight: 500;
+}
+
+.main-objects .dog-name span {
+	margin: 5px;
+}
+
+.main-bio p {
+	color: #3C6707;
+	padding: 5px;
+}
+
+.promo-box span {
+	font-weight: bold;
+}
+
+.primary-aside .dog-name {
+	color: #2198D6;
+	font-weight: 500;
+	margin: 5px;
+}
+
+/****************************************************************************
+********* HELPERS **********************************************************/
+.promo-box button {
+	background-color: white;
+	border-radius: 4px;
+}
+
+.tagline {
+	font-weight: 700;
+}
